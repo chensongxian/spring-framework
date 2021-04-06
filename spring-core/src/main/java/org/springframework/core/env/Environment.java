@@ -95,18 +95,14 @@ public interface Environment extends PropertyResolver {
 	String[] getDefaultProfiles();
 
 	/**
-	 * Return whether one or more of the given profiles is active or, in the case of no
-	 * explicit active profiles, whether one or more of the given profiles is included in
-	 * the set of default profiles. If a profile begins with '!' the logic is inverted,
-	 * i.e. the method will return {@code true} if the given profile is <em>not</em> active.
-	 * For example, {@code env.acceptsProfiles("p1", "!p2")} will return {@code true} if
-	 * profile 'p1' is active or 'p2' is not active.
-	 * @throws IllegalArgumentException if called with zero arguments
-	 * or if any profile is {@code null}, empty, or whitespace only
-	 * @see #getActiveProfiles
-	 * @see #getDefaultProfiles
-	 * @see #acceptsProfiles(Profiles)
-	 * @deprecated as of 5.1 in favor of {@link #acceptsProfiles(Profiles)}
+	 * 返回一个或多个给定的配置文件是否处于活动状态，或者在没有显式活动配置文件的情况下，
+	 * 返回一个或多个给定的配置文件是否包含在默认配置文件集中。
+	 * 如果一个profile 以“！”开头 逻辑取反，即如果给定的配置文件未激活，则该方法将返回true。
+	 * 例如，如果配置文件“ p1”处于活动状态或“ p2”处于非活动状态，则env.acceptsProfiles（“ p1”，“！p2”）
+	 * 将返回true。
+	 *
+	 * @param profiles
+	 * @return
 	 */
 	@Deprecated
 	boolean acceptsProfiles(String... profiles);

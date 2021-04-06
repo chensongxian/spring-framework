@@ -53,6 +53,9 @@ import org.springframework.beans.BeansException;
  * {@link org.springframework.core.annotation.Order @Order} annotation is not
  * taken into account for {@code BeanFactoryPostProcessor} beans.
  *
+ * BeanDefinition
+ * 后置处理器/增强器, 用来扩展修改BeanDefinition
+ *
  * @author Juergen Hoeller
  * @author Sam Brannen
  * @since 06.07.2003

@@ -19,6 +19,7 @@ package org.springframework.beans.factory;
 import org.springframework.lang.Nullable;
 
 /**
+ * 提供实现层级结构即父子关系能力
  * Sub-interface implemented by bean factories that can be part
  * of a hierarchy.
  *

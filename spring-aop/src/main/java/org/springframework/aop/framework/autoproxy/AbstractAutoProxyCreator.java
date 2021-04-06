@@ -80,6 +80,8 @@ import org.springframework.util.StringUtils;
  * or if none matches, a {@link org.springframework.aop.target.SingletonTargetSource}
  * will be used by default to wrap the target bean instance.
  *
+ * 自动代理创建器
+ *
  * @author Juergen Hoeller
  * @author Rod Johnson
  * @author Rob Harrop
