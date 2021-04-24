@@ -27,6 +27,12 @@ import java.nio.channels.ReadableByteChannel;
 import org.springframework.lang.Nullable;
 
 /**
+ *
+ *  统一资源
+ *  Spring 框架所有资源的抽象和访问接口，它继承 org.springframework.core.io.InputStreamSource接口。
+ *  作为所有资源的统一抽象，Resource 定义了一些通用的方法，由子类 AbstractResource 提供统一的默认实现
+ *
+ *
  * Interface for a resource descriptor that abstracts from the actual
  * type of underlying resource, such as a file or class path resource.
  *

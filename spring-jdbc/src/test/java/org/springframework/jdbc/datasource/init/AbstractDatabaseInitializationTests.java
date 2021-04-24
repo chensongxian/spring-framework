@@ -19,6 +19,7 @@ package org.springframework.jdbc.datasource.init;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.core.io.ClassRelativeResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -83,4 +84,9 @@ public abstract class AbstractDatabaseInitializationTests {
 		}
 	}
 
+
+	@Test
+	public void testResource() {
+//		resourceLoader.getResource();
+	}
 }

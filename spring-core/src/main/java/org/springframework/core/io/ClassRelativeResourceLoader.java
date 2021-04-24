@@ -23,6 +23,8 @@ import org.springframework.util.StringUtils;
  * {@link ResourceLoader} implementation that interprets plain resource paths
  * as relative to a given {@code java.lang.Class}.
  *
+ * 根据给定的class 所在包或者所在包的子包下加载资源
+ *
  * @author Juergen Hoeller
  * @since 3.0
  * @see Class#getResource(String)

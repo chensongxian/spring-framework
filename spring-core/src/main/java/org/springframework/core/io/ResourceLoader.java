@@ -20,6 +20,9 @@ import org.springframework.lang.Nullable;
 import org.springframework.util.ResourceUtils;
 
 /**
+ * 统一资源定位
+ * 资源的加载则由 ResourceLoader 来统一定义
+ * 主要应用于根据给定的资源文件地址，返回对应的 Resource
  * Strategy interface for loading resources (e.. class path or file system
  * resources). An {@link org.springframework.context.ApplicationContext}
  * is required to provide this functionality, plus extended
@@ -46,6 +49,9 @@ public interface ResourceLoader {
 
 
 	/**
+	 * 根据所提供资源的路径 location 返回 Resource 实例，但是它不确保该 Resource 一定存在，
+	 * 需要调用 Resource#exist() 方法来判断
+	 *
 	 * Return a Resource handle for the specified resource location.
 	 * <p>The handle should always be a reusable resource descriptor,
 	 * allowing for multiple {@link Resource#getInputStream()} calls.
@@ -67,6 +73,9 @@ public interface ResourceLoader {
 	Resource getResource(String location);
 
 	/**
+	 *
+	 * 返回 ClassLoader 实例，对于想要获取 ResourceLoader 使用的 ClassLoader 用户来说，可以直接调用该方法来获取。在分析 Resource 时，提到了一个类 ClassPathResource ，这个类是可以根据指定的 ClassLoader 来加载资源的。
+	 *
 	 * Expose the ClassLoader used by this ResourceLoader.
 	 * <p>Clients which need to access the ClassLoader directly can do so
 	 * in a uniform manner with the ResourceLoader, rather than relying

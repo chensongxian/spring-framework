@@ -204,6 +204,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 
 	@Override
 	public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
+		// 实际获取bean对象，也是触发依赖注入的方法
 		return doGetBean(name, requiredType, null, false);
 	}
 
